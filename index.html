@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>111</button>
+    <button id="div">222</button>
+    <button class="div">333</button>
+
+</body>
+<script>
+
+   
+    //  console.log(aaa('#div'))
+    
+     function aaa(seletor) {
+        var s = seletor
+        // console.log(s)
+        if(s[0] == '#') {
+            ss = s.substr(1)
+            // console.log(ss)
+            return document.getElementById(ss)
+        } else if (s[0] == '.') {
+            ss = s.substr(1)
+            return document.getElementsByClassName(ss)
+        } else {
+            return document.getElementsByTagName(s)
+        }
+    }
+    // window.οnlοad = function () {
+        aaa('#div').onclick = function () {
+            alert(111)
+        }
+    // }
+</script>
+
+</html>
